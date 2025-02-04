@@ -53,3 +53,26 @@ function convertCurrency(amount, exchangeRate) {
 }
 convertCurrency(100, 1.1); // Expected output: "Converted Amount: $110"
 convertCurrency(250, .85); // Expected output: "Converted Amount: $212.5"
+
+// Task 6 Ascending Order Functions
+let orders = [200, 600, 1200, 450, 800];
+
+const applyBulkDiscount = (Orders, discountFunction) => {
+    return orders.map(discountFunction);
+};
+const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * .9 : amount);
+console.log(discountedOrders); // Expected output: [200, 540, 1080, 450, 720]
+
+// Task 7 Closures
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(expense) {
+        totalExpenses += expense;
+        console.log(`Total Expense: $${totalExpenses}`);
+        return totalExpenses;
+    };
+}
+let tracker = createExpenseTracker();
+console.log(tracker(200)); // Expected output: "Total Expenses: $200"
+console.log(tracker(150)); // Expected output: "Total Expenses: $350"
+
