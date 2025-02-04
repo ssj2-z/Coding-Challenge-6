@@ -76,3 +76,13 @@ let tracker = createExpenseTracker();
 console.log(tracker(200)); // Expected output: "Total Expenses: $200"
 console.log(tracker(150)); // Expected output: "Total Expenses: $350"
 
+// Task 8 Recurion in JavaScript
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10 ) {
+        console.log("Years to Level 10: 0"); return 0;
+    }
+    const years = 2 +
+calculateYearsToPromotion(employeeLevel +1);
+    console.log(`Years to Level 10: ${years}`); return years;
+}
+calculateYearsToPromotion(5); // Expected output: "Years to Level 10: 10"
