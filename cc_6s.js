@@ -13,3 +13,20 @@ const calculateSalesTax = function(amount, taxRate) {
 };
 calculateSalesTax(100, .07); // Expected output: "Sales Tax: $7.00"
 calculateSalesTax(500, .1); // Expected output: "Sales Tax: $50.00"
+
+// Task 3 Arrow Function
+const calculateBonus = (salary, performanceRating) =>
+{
+    let bou=nusPercentage;
+    switch (performanceRating) {
+        case "Excellent": .10; break; 
+        case "Good": bonusPercentage = .15; break;
+        case "Average": bonusPercentage = .08; break;
+        default: bonusPercentage = 0;
+    }
+
+    const bonus = salary * bonusPercentage;
+    console.log(`Bonus: $${bonus.toFixed(2)}`); return bonus;
+};
+calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
+calculateBonus(7000, "Good"); // Expected output: "Bonus: $700"
