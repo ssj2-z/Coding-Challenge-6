@@ -30,3 +30,19 @@ const calculateBonus = (salary, performanceRating) =>
 };
 calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
 calculateBonus(7000, "Good"); // Expected output: "Bonus: $700"
+
+// Task 4 Parameters & Arguments
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let monthlyRate; switch (plan) {
+        case "Basic": monthlyRate = 10; break;
+        case "Premium": monthlyRate = 20; break;
+        case "Enterprise": monthlyRate = 50; break;
+    default:
+        console.log("Invalid plan selected."); return;
+    }
+    const totalCost = (monthlyRate * months) - discount;
+    console.log(`Total Cost: $${totalCost}`); return totalCost;
+}
+calculateSubscriptionCost("Basic", 6, 10); // Expected output: "Total Cost: $50"
+calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Total Cost: $240"
+
