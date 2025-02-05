@@ -17,9 +17,9 @@ calculateSalesTax(500, .1); // Expected output: "Sales Tax: $50.00"
 // Task 3 Arrow Function
 const calculateBonus = (salary, performanceRating) =>
 {
-    let bou=nusPercentage;
+    let bonusPercentage;
     switch (performanceRating) {
-        case "Excellent": .10; break; 
+        case "Excellent": bonusPercentage = .10; break; 
         case "Good": bonusPercentage = .15; break;
         case "Average": bonusPercentage = .08; break;
         default: bonusPercentage = 0;
